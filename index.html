@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Predictor</title>
+    <!-- Use Flask's url_for to properly link static assets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Grade Predictor</h2>
+        <input type="text" id="score" placeholder="Enter Marks (%)">
+        <button onclick="predictGrade()">Predict Grade</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function predictGrade() {
+            const scoreInput = document.getElementById('score');
+            const score = parseFloat(scoreInput.value.trim()); 
+            
+            if (isNaN(score) || score < 0 || score > 100) {
+                document.getElementById('result').innerText = "Please enter a valid percentage (0-100)";
+                return; 
+            }
+
+            let grade = '';
+            if (score >= 90) {
+                grade = 'S';
+            } else if (score >= 80) {
+                grade = 'A+';
+            } else if (score >= 70) {
+                grade = 'A';
+            } else if (score >= 60) {
+                grade = 'B';
+            } else if (score >= 50) {
+                grade = 'C';
+            } else if (score >= 40) {
+                grade = 'D';
+            } else if (score >= 35) {
+                grade = 'E';
+            } else {
+                grade = 'F';
+            }
+
+            document.getElementById('result').innerText = `Predicted Grade: ${grade}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* Global body styles */
+body{
+    background-image: url('https://img.pikbest.com/backgrounds/20190328/exam-study-student-background_1882678.jpg!sw800'); /* Ensure the image is in the 'static' folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Container that holds content */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurred effect for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for better visibility */
+}
+
+
+/* Styling for input fields and buttons */
+input, button {
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styles */
+button {
+    background-color: #007BFF; /* Blue background for button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Styling for the result text */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green; /* Green color for positive results */
+}
